@@ -19,14 +19,14 @@ function Home(props) {
           {props.name ? (
             <span className="usname">Hey,&nbsp;{props.name}</span>
           ) : (
-            <a href="/login">
+            <Link to="/login">
               <button
                 className="btn btn-lg btn-dark hbtn"
                 style={{ width: "200px" }}
               >
                 Login
               </button>
-            </a>
+            </Link>
           )}
         </h1>
       </div>
@@ -156,7 +156,7 @@ function Home(props) {
           If you are in need of Blood you can visit the 'Need Blood Page' to Request for the required Blood Group.
         </h6>
         <br/>
-        <a href="/acceptor"><button className="btn btn-light text-danger">Request Blood</button></a>
+        <Link to="/acceptor"><button className="btn btn-light text-danger">Request Blood</button></Link>
       </div>
 
       <Footer />

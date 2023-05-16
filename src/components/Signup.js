@@ -4,7 +4,7 @@ import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {createUserWithEmailAndPassword, updateProfile} from 'firebase/auth'
 import {auth} from '../firebase'
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Footer from './Footer';
 
 const Signup = () => {
@@ -76,7 +76,7 @@ const Signup = () => {
             </button>
         </div>
         <div className="mt-3">
-        Already Have an Account ? <a href="/login">Log In</a> Now! 
+        Already Have an Account ? <Link to="/login">Log In</Link> Now! 
         </div>
     </div>
 </div>

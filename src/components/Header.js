@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { auth, getAuth } from "../firebase";
 import { signOut } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -36,9 +36,9 @@ const Header = () => {
       <ToastContainer />
       <nav className="navbar navbar-expand-lg p-2 navdabba shadow">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="#">
             Blood Bank Management
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -53,21 +53,21 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav me-auto mb-2 mb-lg-0 container-fluid d-flex justify-content-end">
 
-                <a className="nav-link" aria-current="page" href="/">
+                <Link className="nav-link" aria-current="page" to="/">
                   Home
-                </a>
+                </Link>
 
-                <a className="nav-link" aria-current="page" href="/whydonate">
+                <Link className="nav-link" aria-current="page" to="/whydonate">
                   Why Donate Blood
-                </a>
+                </Link>
 
-                <a className="nav-link" aria-current="page" href="/donor">
+                <Link className="nav-link" aria-current="page" to="/donor">
                   Become a Donor
-                </a>
+                </Link>
 
-                <a className="nav-link" aria-current="page" href="/acceptor">
+                <Link className="nav-link" aria-current="page" to="/acceptor">
                   Need Blood
-                </a>
+                </Link>
 
               {/* <li className="nav-item">
                 <a className="nav-link" aria-current="page" href="/">
@@ -78,23 +78,23 @@ const Header = () => {
               {user ? 
               (
                 <>
-                <a className="nav-link" aria-current="page" href="/profile">
+                <Link className="nav-link" aria-current="page" to="/profile">
                     Profile
-                  </a>
-                <a
+                  </Link>
+                <Link
                     className="nav-link "
                     onClick={logoutfunc}
                     style={{ cursor: "pointer" }}
                   >
                       Logout
-                    </a>
+                    </Link>
                 </>
 
 
               ) : (
-                  <a className="nav-link" href="/login">
+                  <Link className="nav-link" to="/login">
                     Login
-                  </a>
+                  </Link>
               )}
             </div>
           </div>

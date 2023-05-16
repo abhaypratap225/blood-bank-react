@@ -4,7 +4,7 @@ import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {signInWithEmailAndPassword } from 'firebase/auth'
 import {auth} from '../firebase'
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Footer from "./Footer";
 
 
@@ -59,7 +59,7 @@ const Login = () => {
                   </button>
               </div>
               <div className="mt-3">
-              Don't Have an Account ? <a href="/signup">Sign up</a> Now! 
+              Don't Have an Account ? <Link to="/signup">Sign up</Link> Now! 
               </div>
           </div>
       </div>
